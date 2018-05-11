@@ -11,11 +11,11 @@ ENV TEMP_PATH     /temp/jira
 # 3. 将sources.list.163文件上传，用于替换成163源
 # To Ready JIRA
 RUN mkdir /temp && mkdir /temp/jira
-COPY mysql-connector-java-5.1.39-bin.jar         /temp/jira/mysql-connector-java-5.1.39-bin.jar
-COPY atlassian-extras-3.2.jar                    /temp/jira/atlassian-extras-3.2.jar
-COPY postgresql-9.4.1212.jar                     /temp/jira/postgresql-9.4.1212.jar
-COPY atlassian-jira-software-7.3.8.tar.gz        /temp/jira/atlassian-jira-software-7.3.8.tar.gz
-COPY sources.list.163                            /temp/jira/sources.list.163
+COPY ./resource/mysql-connector-java-5.1.39-bin.jar         /temp/jira/mysql-connector-java-5.1.39-bin.jar
+COPY ./resource/atlassian-extras-3.2.jar                    /temp/jira/atlassian-extras-3.2.jar
+COPY ./resource/postgresql-9.4.1212.jar                     /temp/jira/postgresql-9.4.1212.jar
+COPY ./resource/atlassian-jira-software-7.3.8.tar.gz        /temp/jira/atlassian-jira-software-7.3.8.tar.gz
+COPY ./resource/sources.list.163                            /temp/jira/sources.list.163
 # 安装JIRA的运行命令，主要做了以下工作：
 # 1. 将debain的原始源替换成国内的163源
 # 2. 将下载获取JIRA更换为上传JIRA的源码包，因为下载JIRA的速度实在有点感人
