@@ -4,10 +4,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      ports:
-        - "20012:8080"
-      depends_on:
-        - mysql
+    ports:
+      - "20012:8080"
+    depends_on:
+      - mysql
     environment:
       - TZ=Asia/Shanghai
   mysql:
