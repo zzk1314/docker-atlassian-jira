@@ -27,3 +27,6 @@ docker run -d --name jira --link jira-db:mysql -p 20011:8085 -p 20012:8080 -p 20
 docker run -d --name jira --link jira-db:mysql -p 20012:8080  caihe/jira
 
 ```
+
+docker-compose down
+docker-compose  up --build

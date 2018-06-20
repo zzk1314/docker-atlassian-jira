@@ -8,8 +8,8 @@ services:
         - "20012:8080"
       depends_on:
         - mysql
-      environment:
-        - TZ=Asia/Shanghai
+    environment:
+      - TZ=Asia/Shanghai
   mysql:
     image: mysql:5.7
     volumes:
