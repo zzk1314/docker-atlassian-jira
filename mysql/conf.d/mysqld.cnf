@@ -1,8 +1,8 @@
 [mysqld]
-user=mysql
 default-storage-engine=INNODB
-default-character-set=utf8
-collation_server=utf8_bin
+character-set-server = utf8
+collation-server=utf8_bin
+init_connect='SET NAMES utf8;'
 default-time-zone='+8:00'
 [client]
 default-character-set=utf8
