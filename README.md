@@ -22,11 +22,10 @@ docker build -t caihe/jira .
 
 
 ```dockerfile
-docker run -d --name jira --link jira-db:mysql -p 20011:8085 -p 20012:8080 -p 20013:8443 -p 20014:8090 -p 20015:22 caihe/jira
-
 docker run -d --name jira --link jira-db:mysql -p 20012:8080  caihe/jira
 
 ```
 
-docker-compose down
-docker-compose  up --build
+---------------
+
+You can just run ```docker-compose up -d``` to start jira
